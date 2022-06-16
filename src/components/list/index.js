@@ -12,7 +12,7 @@ const List = ({ list, listDelelet }) => {
     </li>
   ));
 
-  return <>{list && <ul className="list-group">{listItems}</ul>}</>;
+  return list && <ul className="list-group">{listItems}</ul>;
 };
 
 export default List;
