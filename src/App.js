@@ -7,6 +7,7 @@ function App() {
   const [list, setList] = useState([]);
 
   const addListItem = (item) => setList((list) => [...list, item]);
+  const removeListItem = (element) => setList(list.filter((list, index) => index !== element));
 
   return (
     <div className="mt-3">
@@ -18,7 +19,7 @@ function App() {
         </div>
         <div className="row">
           <div className="col-12 col-md-6 mx-auto">
-            <List list={list} />
+            <List list={list} listDelelet={removeListItem} />
           </div>
         </div>
       </div>
