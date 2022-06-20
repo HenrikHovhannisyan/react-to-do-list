@@ -6,7 +6,7 @@ import List from "./components/list";
 function App() {
   const [list, setList] = useState([]);
 
-  const addListItem = (item) => setList((list) => [...list, item]);
+  const addListItem = (item) => item.trim() && setList((list) => [...list, item])
   const removeListItem = (element) => setList(list.filter((list, index) => index !== element));
 
   return (
