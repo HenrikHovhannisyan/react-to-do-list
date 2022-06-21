@@ -2,13 +2,13 @@ import "./list.css";
 import React from "react";
 import Delete from "./delete";
 
-const List = ({ list, listDelelet }) => {
+const List = ({ list, listDelete}) => {
   const listItems = list.map((item, index) => (
     <li
       className="list-group-item d-flex justify-content-between align-items-center"
       key={index}
     >
-      {index + 1} - {item} <Delete id={index} deleteItem={listDelelet} />
+      {index + 1} - {item} <Delete id={index} deleteItem={listDelete} />
     </li>
   ));
 
