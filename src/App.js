@@ -3,11 +3,11 @@ import "./App.css";
 import Header from "./components/header";
 import List from "./components/list";
 
-const App = React.memo(() => {
+const App = () => {
   const [list, setList] = useState([]);
 
-  const addListItem = useCallback((item) => item.trim() && setList((list) => [...list, item]))
-  const removeListItem = useMemo(() => (element) => setList(list.filter((list, index) => index !== element)));
+  const addListItem = useCallback((item) => item.trim() && setList((list) => [...list, item]), [list])
+  const removeListItem = useMemo(() => (element) => setList(list.filter((list, index) => index !== element)), [list]);
 
   return (
     <div className="mt-3">
@@ -25,6 +25,6 @@ const App = React.memo(() => {
       </div>
     </div>
   );
-});
+};
 
 export default App;

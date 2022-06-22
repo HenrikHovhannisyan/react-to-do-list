@@ -1,5 +1,5 @@
 import "./list.css";
-import React from "react";
+import React, { memo } from "react";
 import Delete from "./delete";
 
 const List = ({ list, listDelete}) => {
@@ -15,4 +15,4 @@ const List = ({ list, listDelete}) => {
   return list && <ul className="list-group">{listItems}</ul>;
 };
 
-export default List;
+export default memo(List);

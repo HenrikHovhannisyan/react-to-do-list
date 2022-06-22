@@ -1,5 +1,5 @@
 import "./header.css";
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import Add from "./add";
 
 const Header = (props) => {
@@ -27,4 +27,4 @@ const Header = (props) => {
   );
 };
 
-export default Header;
+export default memo(Header);
